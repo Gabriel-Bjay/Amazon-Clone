@@ -1,11 +1,12 @@
 import './App.css';
 import {Route, Switch} from 'react-router-dom'
-import Home from './components/layout/Home';
-import Products from './components/layout/Products';
+import Home from './Home';
+import Products from './Products';
 import Header from './components/layout/Header';
-import ProductDetails from './components/layout/ProductDetails';
+import ProductDetails from './ProductDetails';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-import Login from './components/layout/Login';
+import Login from './Login';
+import NotFound from './NotFound';
 
 const App = () => {
   return (
@@ -28,6 +29,9 @@ const App = () => {
             </Route>
             <Route path = '/login'>
               <Login/>
+            </Route>
+            <Route path ="*">
+              <NotFound/>
             </Route>
       </Switch>
           
