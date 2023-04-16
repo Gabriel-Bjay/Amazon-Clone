@@ -1,9 +1,21 @@
-import React ,{useState} from 'react'
+import React ,{useState, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import './Login.css'
 
 
 const Login = () => {
+  const emailRef =useRef();
+  const passwordRef =useRef();
+  const [isLoggedIn ,setIsLoggedIn] = useState(false)
+
+  const signIn = e => {
+    e.preventDefault();
+    const enteredEmail = emailRef.current.value;
+    const enteredPassword = passwordRef.current.value;
+    localStorage.setItem('isLoggedIn', '1')
+    setIsLoggedIn(true);
+  }
+
   return (
     <div className='login'>
       <Link to = "/">
@@ -15,10 +27,10 @@ const Login = () => {
         <h1>Sign-in</h1>
         <form>
           <h5>Email</h5>
-          <input type='text'/>
+          <input type='text' ref={emailRef}/>
           <h5>Password</h5>
-          <input type='Password'/>
-          <button type='submit' className='login-signInButton'>Submit</button>
+          <input type='Password'  ref={passwordRef}/>
+          <button type='submit' className='login-signInButton' onClick={signIn}>Submit</button>
         </form>
         <p>By Signing-in you agree to the Amazon Fake Clone conditions of use and sale.Please see our privacy notice.</p>
         <button className='login-registerButton'>Create your amazon account</button>
