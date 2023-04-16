@@ -1,0 +1,16 @@
+.products-row{
+    display: grid;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.product{
+    background: white;
+    border-radius: 17px;
+
+}
