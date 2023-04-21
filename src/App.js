@@ -7,11 +7,34 @@ import ProductDetails from './components/ProductDetails';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import Login from './components/Login';
 import NotFound from './components/NotFound';
+import { useEffect, useState } from 'react';
+import AuthContext from "./context/authContext"
 
 const App = () => {
+  const [isLoggedIn,setIsLoggedIn] = useState(false)
+
+  useEffect(() =>{
+    const userInfo = localStorage.getItem('isLoggedIn')
+
+    if (userInfo ==='1') {
+      setIsLoggedIn(true)
+    }
+  }, [])
+
+  const loginHandler = (email,password) =>{
+    localStorage.setItem('isLoggedIn' , '1')
+    setIsLoggedIn(true)
+  }
+
+  const logoutHandler = () =>{
+    localStorage.removeItem('isLoggedIn')
+    setIsLoggedIn(false)
+  }
+
+
   return (
-    <>
-      <Header/>
+    <AuthContext.Provider value={{isLoggedIn: false}}>
+      <Header isAuthenticated={isLoggedIn} onLogout = {logoutHandler}/>
       <main>
       <Switch>
             <Route path='/'exact>
@@ -28,7 +51,7 @@ const App = () => {
               <ProductDetails/>
             </Route>
             <Route path = '/login'>
-              <Login/>
+              <Login onLogin={loginHandler}/>
             </Route>
             <Route path ="*">
               <NotFound/>
@@ -36,7 +59,7 @@ const App = () => {
       </Switch>
           
       </main>
-    </>
+    </AuthContext.Provider>
   );
 }
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom/cjs/react-router-dom.min'
+import { Link} from 'react-router-dom/cjs/react-router-dom.min'
 import "./Header.css"
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
-const Header = () => {
+const Header = ({isAuthenticated, onLogout}) => {
   return (
     <header className="header">
         <Link to="/">
@@ -16,13 +16,18 @@ const Header = () => {
             <input className='header-input' type='text'/>
             <SearchIcon className="search-icon"/>
         </div>
-        <div className='header-nav'>
-            <Link to = "/login">
+        <div className='header-nav' onClick={onLogout }>
+            {isAuthenticated ? (<Link to = "/">
+                <div className='header-option'>
+                    <span className='header-option1'>Hello User</span>
+                    <span className='header-option2'>Sign Out</span>
+                </div>
+            </Link>):(<Link to = "/login">
                 <div className='header-option'>
                     <span className='header-option1'>Hello Guest</span>
                     <span className='header-option2'>Sign In</span>
                 </div>
-            </Link>
+            </Link>)}
             
             <div className='header-option'>
                 <span className='header-option1'>Returns</span>
