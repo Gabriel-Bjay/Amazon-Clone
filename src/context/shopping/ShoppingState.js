@@ -16,10 +16,11 @@ export const ShoppingState = (props) =>{
         });
     };
 
-    return(<ShoppingContext value={
+    return(<ShoppingContext.Provider
+     value={
         {basket : state.basket,
         user: state.user,
         getBasketTotal,
         addToBasket,}}>
-        {props.children}</ShoppingContext>)
+        {props.children}</ShoppingContext.Provider>)
 };
