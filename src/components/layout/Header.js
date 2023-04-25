@@ -3,15 +3,23 @@ import React from 'react'
 import { Link} from 'react-router-dom/cjs/react-router-dom.min'
 import "./Header.css"
 import SearchIcon from '@mui/icons-material/Search';
-import AuthContext from "../../context/authContext"
+// import AuthContext from "../../context/authContext"
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import ShoppingContext from '../../context/shopping/shoppingContext';
+import {auth} from "../../firebase"
+
 
 const Header = () => {
     const shoppingContext = useContext(ShoppingContext);
-    const {basket} = shoppingContext
+    const {basket, user} = shoppingContext
 
-    const ctx = useContext(AuthContext)
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut();
+        }
+    }
+
+    // const ctx = useContext(AuthContext)
   return (
 
         <header className="header">
@@ -24,18 +32,19 @@ const Header = () => {
                 <input className='header-input' type='text'/>
                 <SearchIcon className="search-icon"/>
             </div>
-            <div className='header-nav' onClick={ctx.onLogout }>
-                {ctx.isLoggedIn ? (<Link to = "/">
+            <div className='header-nav' >
+                {/* {ctx.isLoggedIn ? (<Link to = "/">
                     <div className='header-option'>
+                    onClick={ctx.onLogout }
                         <span className='header-option1'>Hello User</span>
                         <span className='header-option2'>Sign Out</span>
+                    </div>  </Link>):(*/}
+                <Link to = {!user && '/login'}>
+                    <div className='header-option' onClick={handleAuthentication}>
+                        <span className='header-option1'>Hello {!user ? 'Guest' : user.email}</span>
+                        <span className='header-option2'>{!user  ? 'Sign Out': 'Sign In'}</span>
                     </div>
-                </Link>):(<Link to = "/login">
-                    <div className='header-option'>
-                        <span className='header-option1'>Hello Guest</span>
-                        <span className='header-option2'>Sign In</span>
-                    </div>
-                </Link>)}
+                </Link>
                 
                 <div className='header-option'>
                     <span className='header-option1'>Returns</span>
