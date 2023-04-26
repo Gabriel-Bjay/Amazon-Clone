@@ -19,7 +19,7 @@ const CheckoutProduct = ({id, image, title, rating, price, hideButton}) => {
               {Array(rating)
               .fill()
               .map(( _, i) => (
-                <p>:star:</p>
+                <p key={i}>⭐</p>
               ))}
           </div>
 

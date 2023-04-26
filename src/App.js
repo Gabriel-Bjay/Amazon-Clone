@@ -10,7 +10,8 @@ import ShoppingContext from './components/context/shopping/shoppingContext';
 import NotFound from './components/NotFound';
 import { useEffect, useContext } from 'react';
 import { auth } from './firebase';
-import Checkout from './components/Checkout';
+import Checkout from './components/CheckoutProduct'
+import Payment from './components/Payment';
 
 
 const App = () => {
@@ -47,6 +48,9 @@ const App = () => {
             </Route>
             <Route path = '/checkout'>
               <Checkout/>
+            </Route>
+            <Route path="/payment">
+              <Payment />
             </Route>
             <Route path = '/login'>
               <Login/>
