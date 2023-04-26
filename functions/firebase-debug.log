@@ -1,0 +1,71 @@
+[debug] [2023-04-26T17:04:57.487Z] ----------------------------------------------------------------------
+[debug] [2023-04-26T17:04:57.492Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-04-26T17:04:57.496Z] CLI Version:   11.27.0
+[debug] [2023-04-26T17:04:57.496Z] Platform:      win32
+[debug] [2023-04-26T17:04:57.497Z] Node Version:  v18.15.0
+[debug] [2023-04-26T17:04:57.498Z] Time:          Wed Apr 26 2023 20:04:57 GMT+0300 (East Africa Time)
+[debug] [2023-04-26T17:04:57.499Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-26T17:04:57.771Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-26T17:04:57.772Z] > authorizing via signed-in user (jayabjay2018@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-04-26T17:04:57.804Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-04-26T17:04:57.806Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-04-26T17:04:57.840Z] [hub] writing locator at C:\Users\DELL\AppData\Local\Temp\hub-clone-22d24.json
+[debug] [2023-04-26T17:04:57.956Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-04-26T17:04:57.957Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-04-26T17:04:57.957Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-04-26T17:04:58.007Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\jayabjay2018_gmail_com_application_default_credentials.json
+[debug] [2023-04-26T17:04:58.021Z] Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\jayabjay2018_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\DELL\\AppData\\Roaming\\firebase\\jayabjay2018_gmail_com_application_default_credentials.json"}}
+[debug] [2023-04-26T17:04:58.032Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-22d24/adminSdkConfig [none]
+[debug] [2023-04-26T17:04:58.564Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-22d24/adminSdkConfig 200
+[debug] [2023-04-26T17:04:58.565Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-22d24/adminSdkConfig {"projectId":"clone-22d24","storageBucket":"clone-22d24.appspot.com"}
+[info] i  ui: downloading ui-v1.11.5.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.5.zip..."}}
+[debug] [2023-04-26T17:04:58.656Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.5.zip 
+[debug] [2023-04-26T17:04:59.182Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.5.zip 200
+[debug] [2023-04-26T17:04:59.182Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.5.zip [stream]
+[debug] [2023-04-26T17:05:02.186Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-04-26T17:05:02.186Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-04-26T17:05:02.186Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\DELL\\.cache\\firebase\\emulators\\ui-v1.11.5\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\DELL\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.5\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-04-26T17:05:02.509Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-04-26T17:05:02.510Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\DELL\OneDrive\React Js\amazon-clone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\DELL\\OneDrive\\React Js\\amazon-clone\\functions\" for Cloud Functions..."}}
+[debug] [2023-04-26T17:05:02.748Z] Validating nodejs source
+[debug] [2023-04-26T17:05:06.955Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0",
+    "stripe": "^12.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-04-26T17:05:06.956Z] Building nodejs source
+[debug] [2023-04-26T17:05:06.957Z] Failed to find version of module node: reached end of search path C:\Users\DELL\OneDrive\React Js\amazon-clone\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-04-26T17:05:06.961Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-26T17:05:06.976Z] Found firebase-functions binary at 'C:\Users\DELL\OneDrive\React Js\amazon-clone\functions\node_modules\.bin\firebase-functions'
