@@ -9,6 +9,7 @@ const Product = ({id, image, title, rating, price}) => {
   const addToBasketHandler =()=>{
     addToBasket({item: {id, image, title, rating, price} })
   };
+
   return (
     <div className='product'>
       <img src={image}alt='' className=''/>
@@ -17,18 +18,19 @@ const Product = ({id, image, title, rating, price}) => {
         <p>{title}</p>
         <div className='product-rating'>
          <p>{rating}</p>
-            {/* {Array(rating)
+            {Array(rating)
             .fill()
             .map(( _, i) => (
-              <>:star</>
-            ))} */}
+              <p>:star:</p>
+            ))}
         </div>
 
         <p className='product-price'>
-            {price}
+           <small>$</small><strong>{price}</strong> 
         </p>
 
       </div>
+     
       <button className='product-button' onClick={addToBasketHandler}>Add To Basket</button>
     </div>
   )
