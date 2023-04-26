@@ -46,7 +46,12 @@ const Payment = () => {
                 />
                 ))}
             </div>
-            </div>
+        </div>
+        <div className="payment_section">
+          <div className="payment_title">
+            <h3>Payment Method</h3>
+          </div>
+        </div>  
       </div>
     </div>
   )

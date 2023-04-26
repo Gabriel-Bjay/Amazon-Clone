@@ -1,6 +1,8 @@
 import './App.css';
 import {Route, Switch} from 'react-router-dom'
 import Home from './components/Home';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import Products from './components/Products';
 import Header from './components/layout/Header';
 import ProductDetails from './components/ProductDetails';
