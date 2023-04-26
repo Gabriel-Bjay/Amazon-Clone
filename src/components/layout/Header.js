@@ -5,7 +5,7 @@ import "./Header.css"
 import SearchIcon from '@mui/icons-material/Search';
 // import AuthContext from "../../context/authContext"
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import ShoppingContext from '../../context/shopping/shoppingContext';
+import ShoppingContext from '../context/shopping/shoppingContext';
 import {auth} from "../../firebase"
 
 

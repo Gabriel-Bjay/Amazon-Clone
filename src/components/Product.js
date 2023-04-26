@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import "./Products.css"
-import ShoppingContext from '../context/shopping/shoppingContext'
+import ShoppingContext from './context/shopping/shoppingContext';
 
 const Product = ({id, image, title, rating, price}) => {
   const shoppingContext = useContext(ShoppingContext);

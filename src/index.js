@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
-import { ShoppingState } from './context/shopping/ShoppingState';
+import { ShoppingState } from './components/context/shopping/ShoppingState';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
