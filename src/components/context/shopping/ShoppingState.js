@@ -2,40 +2,52 @@ import { useReducer } from "react";
 import ShoppingContext from "./shoppingContext";
 import { shoppingReducer } from "./shoppingReducer";
 
-export const ShoppingState = (props) =>{
-    const initialState = {basket: [], user:null};
-    const [state,dispatch] = useReducer(shoppingReducer,initialState);
+export const ShoppingState = (props) => {
+  const initialState = { basket: [], user: null };
+  const [state, dispatch] = useReducer(shoppingReducer, initialState);
 
-    const getBasketTotal = (basket) =>{
-        basket?.reduce((amount, item) => item.price + amount, 0)
-    }
-    const addToBasket = async(item) => {
-        dispatch ({ 
-            type: 'ADD_TO_BASKET',
-            payload: item,
-        });
-    };
+  //Selectors
+  const getBasketTotal = (basket) =>
+    basket?.reduce((amount, item) => item.price + amount, 0);
 
-    const removeFromBasket = (item) =>{
-        dispatch({type: "REMOVE_FROM_BASKET", 
-        payload: item
-     });
-    } 
+  const addToBasket = async ({ item }) => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      payload: item,
+    });
+  };
 
-    const setUser = (user) => {
-        dispatch({
-            type: 'SET_USER',
-            payload: user ,
-        })
-    }
+  const emptyBasket = () => {
+    dispatch({
+      type: "EMPTY_BASKET",
+    });
+  };
 
-    return(<ShoppingContext.Provider
-     value={
-        {basket : state.basket,
+  const removeFromBasket = (item) => {
+    dispatch({ type: "REMOVE_FROM_BASKET", payload: item });
+  };
+
+  const setUser = (user) => {
+    console.log("User payload", user);
+    dispatch({
+      type: "SET_USER",
+      payload: user,
+    });
+  };
+
+  return (
+    <ShoppingContext.Provider
+      value={{
+        basket: state.basket,
         user: state.user,
         getBasketTotal,
         addToBasket,
-        setUser
-        }}>
-        {props.children}</ShoppingContext.Provider>)
+        setUser,
+        removeFromBasket,
+        emptyBasket,
+      }}
+    >
+      {props.children}
+    </ShoppingContext.Provider>
+  );
 };

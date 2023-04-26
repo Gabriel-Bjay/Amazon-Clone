@@ -1,56 +1,61 @@
-import React from 'react'
-// import { Link } from 'react-router-dom/cjs/react-router-dom'
-import "./Products.css"
-import Product from './Product'
+import React from "react";
+import Product from "./Product";
+import "./Products.css";
 
 const Products = () => {
   return (
-    <div className='products-row'>
-      <Product
-        id = "1"
-        title = " SteelSeries Arctis 5 - RGB Illuminated Gaming Headset with DTS Headphone: X v2.0 Surround - for PC and PlayStation 4 - Black"
-        image = "https://m.media-amazon.com/images/I/81Y9BnR2+hL._AC_UY218_.jpg"
-        rating = {4}
-        price = "$59.99"
-      />
-      <Product
-        id = "2"
-        title = " HP 67XL Black High-yield Ink Cartridge | Works with HP DeskJet 1255, 2700, 4100 Series, HP ENVY 6000, 6400 Series | Eligible for Instant Ink"
-        image = "https://m.media-amazon.com/images/I/71dncPbANKL._AC_UL320_.jpg"
-        rating = {3}
-        price = "$37.49"
-      />
-      <Product
-        id = "3"
-        title = "iPhone Charger Fast Charging,【Apple MFi Certified】 2Pack 20W Type C Fast Charger Block with 6FT USB C to Lightning Cable for iPhone 14/13"
-        image = "https://m.media-amazon.com/images/I/61nKJ+3s3XL._AC_UL320_.jpg"
-        rating = {4}
-        price = "$12.49"
-      />
-      <Product
-        id = "4"
-        title = "Seagate Portable 2TB External Hard Drive HDD — USB 3.0 for PC, Mac, PlayStation, & Xbox -1-Year Rescue Service (STGX2000400)"
-        image = "https://m.media-amazon.com/images/I/81tjLksKixL._AC_UL320_.jpg"
-        rating = {5}
-        price = "$61.11"
-      />
-      <Product
-        id = "5"
-        title = "Seagate Portable 2TB External Hard Drive HDD — USB 3.0 for PC, Mac, PlayStation, & Xbox -1-Year Rescue Service (STGX2000400)"
-        image = "https://m.media-amazon.com/images/I/81tjLksKixL._AC_UL320_.jpg"
-        rating = {4}
-        price = "$61.11"
-      />
-      <Product
-        id = "6"
-        title = "SteelSeries Apex 3 TKL RGB Gaming Keyboard – Tenkeyless Compact Form Factor - 8-Zone RGB Illumination – IP32 Water & Dust Resistant – Whisper Quiet Gaming Switch – Gaming Grade Anti-Ghosting"
-        image = "https://m.media-amazon.com/images/I/81dLH5W903L._AC_UY218_.jpg"
-        rating = {3}
-        price = "$39.98"
-      />
+    <>
+      <div className="products_row">
+        <Product
+          id="1"
+          title="Seagate Portable 2TB External Hard Drive Portable HDD – USB 3.0 for
+          PC, Mac, PlayStation, & Xbox - 1-Year Rescue Service (STGX2000400)"
+          image="https://m.media-amazon.com/images/I/81tjLksKixL._AC_UL320_.jpg"
+          rating={4}
+          price={59.99}
+        />
+        <Product
+          id="1234567"
+          title="Razer Cynosa Chroma Gaming Keyboard: Individually Backlit RGB Keys - Spill-Resistant Design - Programmable Macro Functionality - Quiet & Cushioned"
+          price={34.99}
+          rating={5}
+          image="https://images-na.ssl-images-amazon.com/images/I/61WgmLgwuQL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+        />
+      </div>
+      <div className="products_row">
+        <Product
+          id="1434569"
+          title="AMD Ryzen 5 5600X 6-core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler"
+          price={288.89}
+          rating={5}
+          image="https://m.media-amazon.com/images/I/61vGQNUEsGL._AC_UL320_.jpg"
+        />
+        <Product
+          id="12365487"
+          title="Soundance Laptop Stand, Aluminum Computer Riser, Ergonomic Laptops Elevator for Desk, Metal Holder Compatible with 10 to 15.6 Inches Notebook Computer, Silver"
+          price={27.99}
+          rating={2}
+          image="https://m.media-amazon.com/images/I/81MN9l2nl2S._AC_UL320_.jpg"
+        />
+        <Product
+          id="12345567"
+          title="H390 Wired Headset, Stereo Headphones with Noise-Cancelling Microphone"
+          price={24.99}
+          rating={5}
+          image="https://m.media-amazon.com/images/I/61CqYq+xwNL._AC_UL320_.jpg"
+        />
+      </div>
+      <div className="products_row">
+        <Product
+          id="12345367"
+          title="Sceptre 24 inch Professional Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Machine Black (E248W-19203R Series)"
+          price={193.49}
+          rating={3}
+          image="https://m.media-amazon.com/images/I/71rXSVqET9L._AC_UL320_.jpg"
+        />
+      </div>
+    </>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Products
+export default Products;
