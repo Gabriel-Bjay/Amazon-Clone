@@ -46,6 +46,7 @@ const Payment = () => {
         payment_method: { card: elements.getElement(CardElement) },
       })
       .then(({ paymentIntent }) => {
+
         db.collection("user")
           .doc(user?.uid)
           .collection("orders")

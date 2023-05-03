@@ -4,7 +4,8 @@ import "./CheckoutProduct.css"
 
 const CheckoutProduct = ({id, image, title, rating, price, hideButton}) => {
   const shoppingContext = useContext(ShoppingContext);
-  const {removeFromBasket} = shoppingContext
+  const {removeFromBasket} = shoppingContext;
+  
   const removeFromBasketHandler =() => {
     removeFromBasket({id: id});
   }
