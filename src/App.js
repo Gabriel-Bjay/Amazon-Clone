@@ -14,6 +14,7 @@ import { useEffect, useContext } from 'react';
 import { auth } from './firebase';
 import Checkout from './components/CheckoutProduct'
 import Payment from './components/Payment';
+import Orders from "./components/Orders";
 
 const promise = loadStripe(
   "pk_test_51N1As3DRIsEHj72wieVYAegm39q9x0vV55rklaY9Yf9cV0zyKx7aXGZdeEu1iFs8V4Yxg06uojL8xQ4dASCnuSdb00GhlNGjJN"
@@ -63,6 +64,9 @@ const App = () => {
             <Route path = '/login'>
               <Login/>
             </Route>
+            <Route path="/orders">
+            <Orders />
+          </Route>
             <Route path ="*">
               <NotFound/>
             </Route>
