@@ -14,7 +14,7 @@ const CheckoutProduct = ({id, image, title, rating, price, hideButton}) => {
        <img src={image}alt='' className='checkout-product-image'/>
 
         <div className='checkout-product-info'>
-          <p classname="checkout-product-title">{title}</p>
+          <p className="checkout-product-title">{title}</p>
           <div className='checkout-product-rating'>
           <p>{rating}</p>
               {Array(rating)
